@@ -345,28 +345,28 @@ public:
     }
 };
 
-int main() {
-    std::string markdown =
-        "# Valid heading 1\n"
-        "#Invalid heading\n"
-        "## Valid heading 2\n"
-        "This is **bold** and *italic* text.\n"
-        "This is **unclosed bold and *nested italic*\n"
-        "- Valid list item\n"
-        "-Invalid list item\n"
-        "Here's a [valid link](https://example.com)\n"
-        "Here's an [invalid link](https://example.com\n"
-        "And a ![valid image](image.jpg)\n"
-        "And an ![invalid image(image.jpg\n"
-        "A *Nested bolded **nested italic** bolded again*\n";
+// int main() {
+//     std::string markdown =
+//         "# Valid heading 1\n"
+//         "#Invalid heading\n"
+//         "## Valid heading 2\n"
+//         "This is **bold** and *italic* text.\n"
+//         "This is **unclosed bold and *nested italic*\n"
+//         "- Valid list item\n"
+//         "-Invalid list item\n"
+//         "Here's a [valid link](https://example.com)\n"
+//         "Here's an [invalid link](https://example.com\n"
+//         "And a ![valid image](image.jpg)\n"
+//         "And an ![invalid image(image.jpg\n"
+//         "A *Nested bolded **nested italic** bolded again*\n";
     
-    Lexer lexer(markdown);
-    Token token = lexer.get_next_token();
+//     Lexer lexer(markdown);
+//     Token token = lexer.get_next_token();
     
-    while (token.getType() != TEXT || !token.getValue().empty()) {
-        token.repr();
-        token = lexer.get_next_token();
-    }
+//     while (token.getType() != TEXT || !token.getValue().empty()) {
+//         token.repr();
+//         token = lexer.get_next_token();
+//     }
     
-    return 0;
-}
+//     return 0;
+// }
